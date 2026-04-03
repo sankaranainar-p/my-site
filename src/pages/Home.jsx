@@ -31,7 +31,7 @@ const credentials = [
 const highlights = [
   { label: 'Publications', value: '3' },
   { label: 'Conference Talks', value: '15+' },
-  { label: 'Peer Reviews', value: '20+' },
+  { label: 'Peer Reviews', value: '40+' },
   { label: 'Years in Engineering', value: '15+' },
 ]
 

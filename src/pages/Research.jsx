@@ -67,6 +67,28 @@ export default function Research() {
         Exploring the intersection of autonomous AI systems, intelligent operations, and platform engineering.
       </p>
 
+      {/* ORCID */}
+      <div className="mb-10">
+        <a
+          href="https://orcid.org/0009-0007-7891-7697"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg border-2 border-[#a6ce39] text-[#4a7c2f] hover:bg-[#a6ce39]/10 font-medium transition-colors duration-200"
+        >
+          <svg viewBox="0 0 256 256" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="128" cy="128" r="128" fill="#a6ce39"/>
+            <circle cx="86" cy="86" r="16" fill="white"/>
+            <rect x="70" y="112" width="32" height="80" rx="4" fill="white"/>
+            <path d="M120 86h44c28 0 48 18 48 46s-20 46-48 46h-44V86z" fill="white"/>
+            <path d="M136 102h26c18 0 30 10 30 30s-12 30-30 30h-26V102z" fill="#a6ce39"/>
+          </svg>
+          View ORCID Profile
+          <svg className="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+
       {/* Focus Areas */}
       <h2 className="text-xl font-semibold text-navy-800 mb-5">Research Focus Areas</h2>
       <div className="grid sm:grid-cols-2 gap-4 mb-14">
