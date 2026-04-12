@@ -61,23 +61,6 @@ const publications = [
     doi: null,
     coAuthors: 'Kathiresan Jayabalan, Sethuraman Radhakrishnan',
   },
-  {
-    title: 'AI-Driven Greenwashing Detection Framework for ESG Investing Platforms: Enhancing Authenticity in Sustainable Investment',
-    venue: '6th International Conference on Global Financial and Business Environment (NDIM), New Delhi, Dec 12–13, 2025',
-    year: '2025',
-    type: 'Conference',
-    status: 'Published',
-    doi: null,
-    coAuthors: 'Kathiresan Jayabalan',
-  },
-  {
-    title: 'Explainable AI for Real-Time Financial Compliance and Risk Management',
-    venue: '',
-    year: '2025',
-    type: 'Conference',
-    status: 'Under Review',
-    doi: null,
-  },
 ]
 
 const reviews = [

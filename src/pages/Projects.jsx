@@ -17,7 +17,7 @@ const projects = [
     title: 'AI Compliance-as-Code',
     desc: 'VS Code extension + FastAPI backend that performs real-time compliance analysis on source code. A regex-based static scanner extracts sensitive fields, endpoints, and data-handling patterns, then passes a structured context hint to Claude for deep analysis against GDPR, PCI DSS, and MiCA rule sets — eliminating cold-start LLM re-derivation.',
     tags: ['Python', 'FastAPI', 'Claude API', 'TypeScript', 'VS Code Extension', 'Pydantic', 'GDPR', 'PCI DSS'],
-    status: 'Beta',
+    status: 'Production',
   },
   {
     title: 'Test Simulation FinTech',
