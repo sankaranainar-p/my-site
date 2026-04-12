@@ -44,14 +44,58 @@ const publications = [
     status: 'Published',
     doi: 'https://doi.org/10.1109/icesc65114.2025.11212519',
   },
+  {
+    title: 'AI-Augmented Site Reliability Engineering: Enhancing Resilience and Compliance in Financial Systems',
+    venue: '2nd International Conference on Deep Learning and Visual Artificial Intelligence (ICDLAI 2025), Jodhpur Institute of Engineering and Technology, Dec 20–21, 2025',
+    year: '2025',
+    type: 'Conference',
+    status: 'Published',
+    doi: null,
+  },
+  {
+    title: 'Orchestrating AI Microservices for Adaptive Fraud Detection and Compliance in Modern Financial Systems',
+    venue: '2nd International Conference on Deep Learning and Visual Artificial Intelligence (ICDLAI 2025), Jodhpur, Dec 20–21, 2025',
+    year: '2025',
+    type: 'Conference',
+    status: 'Published',
+    doi: null,
+    coAuthors: 'Kathiresan Jayabalan, Sethuraman Radhakrishnan',
+  },
+  {
+    title: 'AI-Driven Greenwashing Detection Framework for ESG Investing Platforms: Enhancing Authenticity in Sustainable Investment',
+    venue: '6th International Conference on Global Financial and Business Environment (NDIM), Dec 12–13, 2025',
+    year: '2025',
+    type: 'Conference',
+    status: 'Published',
+    doi: null,
+    coAuthors: 'Kathiresan Jayabalan',
+  },
+  {
+    title: 'Explainable AI for Real-Time Financial Compliance and Risk Management',
+    venue: '',
+    year: '2025',
+    type: 'Conference',
+    status: 'Under Review',
+    doi: null,
+  },
 ]
 
 const reviews = [
-  { venue: 'IEEE Transactions on Software Engineering', count: '6 papers' },
-  { venue: 'IEEE Internet of Things Journal', count: '4 papers' },
-  { venue: 'ACM Computing Surveys', count: '3 papers' },
-  { venue: 'Empirical Software Engineering', count: '5 papers' },
-  { venue: 'Journal of Systems and Software', count: '4 papers' },
+  { venue: '5th International Conference on Artificial Intelligence and Knowledge Processing (AIKP)', year: '2025', count: '2 papers' },
+  { venue: 'International Conference on Computational Approaches (iconCEPT), NIT Puducherry', year: '2025', count: '3 papers' },
+  { venue: 'International Conference on Smart Technologies and Innovation for Computing (INCSTIC)', year: '2025', count: '1 paper' },
+  { venue: 'IEEE Conference on AI in Education (PUNECON track)', year: '2025', count: '6 papers' },
+  { venue: 'International Conference on Industrial Engineering and Operations Management (IEOM-VIT)', year: '2025', count: '4 papers' },
+  { venue: 'International Conference on Recent Trends in Advanced Computing (ICRTAC), Malaysia — VIT', year: '2025', count: '4 papers' },
+  { venue: '2nd International Conference on Business Intelligence, Computational Mathematics & Data Analytics (IBCD), Dr. D.Y. Patil Institute, Pune', year: '2025', count: '7 papers' },
+  { venue: '9th International Conference on Computational Intelligence and Data Science (ICCIDS), SSN College', year: '2026', count: '3 papers' },
+  { venue: 'International Conference on Computational Intelligence and Emerging Systems (iCCIES)', year: '2026', count: '1 paper' },
+  { venue: '5th International Conference on Cyber-Physical Systems (i5CPS), NIT Karaikal', year: '2026', count: '4 papers' },
+  { venue: '6th International Conference on Advances in Information Communication Technology and Computing (AICTC), BTU Bikaner', year: '2026', count: '1 paper' },
+  { venue: 'World Conference on Computer Science and Technology (WcCST), Punjab', year: '2026', count: '2 papers' },
+  { venue: 'International Conference on Human-Computer Interaction (Human)', year: '2026', count: '1 paper' },
+  { venue: 'International Conference on ICT for Global Innovations and Solutions', year: '2026', count: '1 paper' },
+  { venue: 'International Conference on AI, Signal & Emerging Technologies (ICAISET)', year: '2026', count: '5 papers' },
 ]
 
 const statusColor = {
@@ -103,12 +147,13 @@ export default function Research() {
       {/* Publications */}
       <h2 className="text-xl font-semibold text-navy-800 mb-5">Publications</h2>
       <div className="space-y-4 mb-14">
-        {publications.map(({ title, venue, year, type, status, doi }) => (
+        {publications.map(({ title, venue, year, type, status, doi, coAuthors }) => (
           <div key={title} className="card">
             <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
               <div className="flex-1 min-w-0">
                 <h3 className="font-medium text-navy-900 mb-1 leading-snug">{title}</h3>
-                <p className="text-sm text-gray-500">{venue} · {year}</p>
+                {venue && <p className="text-sm text-gray-500">{venue} · {year}</p>}
+                {coAuthors && <p className="text-xs text-gray-400 mt-0.5">Co-authors: {coAuthors}</p>}
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="badge">{type}</span>
@@ -117,17 +162,19 @@ export default function Research() {
                 </span>
               </div>
             </div>
-            <a
-              href={doi}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs text-navy-600 hover:text-navy-800 transition-colors font-mono"
-            >
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-              {doi.replace('https://doi.org/', 'DOI: ')}
-            </a>
+            {doi && (
+              <a
+                href={doi}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs text-navy-600 hover:text-navy-800 transition-colors font-mono"
+              >
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                {doi.replace('https://doi.org/', 'DOI: ')}
+              </a>
+            )}
           </div>
         ))}
       </div>
@@ -135,13 +182,17 @@ export default function Research() {
       {/* Peer Reviews */}
       <h2 className="text-xl font-semibold text-navy-800 mb-5">Peer Review Service</h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {reviews.map(({ venue, count }) => (
-          <div key={venue} className="card flex items-center justify-between gap-4">
-            <p className="text-sm text-gray-700 leading-snug">{venue}</p>
+        {reviews.map(({ venue, year, count }) => (
+          <div key={venue} className="card flex items-start justify-between gap-4">
+            <div className="flex-1 min-w-0">
+              <p className="text-sm text-gray-700 leading-snug">{venue}</p>
+              <p className="text-xs text-gray-400 mt-0.5">{year}</p>
+            </div>
             <span className="badge shrink-0">{count}</span>
           </div>
         ))}
       </div>
+      <p className="mt-6 text-sm text-gray-400 text-center">44 papers reviewed across 15 conferences</p>
     </SectionWrapper>
   )
 }

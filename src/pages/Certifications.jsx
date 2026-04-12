@@ -72,20 +72,85 @@ const certifications = [
     credentialId: null,
     category: 'Cloud & DevOps',
   },
+  {
+    title: 'Reviewer Certificate — IEEE AI Symposium',
+    issuer: 'University of South Dakota',
+    issued: '2025',
+    credentialId: null,
+    category: 'Peer Review',
+  },
+  {
+    title: 'Reviewer Certificate — IBCD-2025',
+    issuer: 'Dr. D.Y. Patil Institute, Pune',
+    issued: '2025',
+    credentialId: null,
+    category: 'Peer Review',
+  },
+  {
+    title: 'Reviewer Certificate — INCSTIC-2025',
+    issuer: 'INCSTIC',
+    issued: '2025',
+    credentialId: null,
+    category: 'Peer Review',
+  },
+  {
+    title: 'Reviewer Certificate — ICRTAC',
+    issuer: 'VIT, Malaysia',
+    issued: '2025',
+    credentialId: null,
+    category: 'Peer Review',
+  },
+  {
+    title: 'Reviewer Certificate — iconCEPT',
+    issuer: 'NIT Puducherry',
+    issued: '2025',
+    credentialId: null,
+    category: 'Peer Review',
+  },
+  {
+    title: 'Reviewer Certificate — AICTC-2026',
+    issuer: 'BTU Bikaner',
+    issued: '2026',
+    credentialId: null,
+    category: 'Peer Review',
+  },
+  {
+    title: 'Reviewer Certificate — ICCIDS-2026',
+    issuer: 'SSN College of Engineering',
+    issued: '2026',
+    credentialId: null,
+    category: 'Peer Review',
+  },
+  {
+    title: 'Reviewer Certificate — WcCST-2026',
+    issuer: 'Punjab',
+    issued: '2026',
+    credentialId: null,
+    category: 'Peer Review',
+  },
+  {
+    title: 'Reviewer Certificate — i5CPS-2026',
+    issuer: 'NIT Karaikal',
+    issued: '2026',
+    credentialId: null,
+    category: 'Peer Review',
+  },
 ]
 
-const categories = ['All', 'AI & Prompt Engineering', 'Leadership & Management', 'Cloud & DevOps']
+const categories = ['All', 'AI & Prompt Engineering', 'Leadership & Management', 'Cloud & DevOps', 'Peer Review']
 
 const categoryColor = {
   'AI & Prompt Engineering': 'bg-navy-50 text-navy-700 border-navy-200',
   'Leadership & Management': 'bg-purple-50 text-purple-700 border-purple-200',
   'Cloud & DevOps':          'bg-sky-50 text-sky-700 border-sky-200',
+  'Peer Review':             'bg-emerald-50 text-emerald-700 border-emerald-200',
 }
 
 const categoryAccent = {
   'AI & Prompt Engineering': 'border-l-navy-700',
   'Leadership & Management': 'border-l-purple-500',
   'Cloud & DevOps':          'border-l-sky-500',
+  'Peer Review':             'border-l-emerald-500',
 }
 
 export default function Certifications() {
