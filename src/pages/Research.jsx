@@ -107,7 +107,7 @@ export default function Research() {
       {/* ORCID */}
       <div className="mb-10">
         <a
-          href="https://orcid.org/0009-0007-7891-7697"
+          href="https://orcid.org/0009-0006-1738-3863"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg border-2 border-[#a6ce39] text-[#4a7c2f] hover:bg-[#a6ce39]/10 font-medium transition-colors duration-200"
