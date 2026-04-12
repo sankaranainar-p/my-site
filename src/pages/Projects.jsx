@@ -2,34 +2,34 @@ import SectionWrapper from '../components/SectionWrapper'
 
 const projects = [
   {
-    title: 'Building Agentic AI Dashboard For Personalized Mentorship',
-    desc: 'An end-to-end AI solution that combines student performance data with syllabus knowledge to automatically generate personalized dashboards and remedial recommendations. Uses an Agno agent with Ollama (llama3.2) running fully locally — student data never leaves institutional infrastructure, ensuring FERPA compliance. The agent reads Excel student data and a PDF syllabus, identifies at-risk students (score < 60%), queries syllabus embeddings via LanceDB RAG, and generates individual Tailwind-styled HTML dashboards with targeted remedial plans.',
-    tags: ['Agno Framework', 'Ollama', 'LanceDB', 'RAG', 'Python', 'Pandas', 'Tailwind CSS', 'PyPDF'],
-    status: 'Completed',
+    title: 'AI Payment Reliability Engine',
+    desc: 'Agentic 5-layer incident response loop for payment systems: classify → root cause analysis → remediate → verify → log. Combines a scikit-learn ML classifier with a Groq/Ollama LLM ensemble for structured triage and RCA generation. Exposes a FastAPI backend with SSE streaming and a React dashboard for real-time incident tracking.',
+    tags: ['Python', 'FastAPI', 'scikit-learn', 'Groq', 'Ollama', 'React', 'Vite', 'Tailwind', 'SSE'],
+    status: 'Production',
   },
   {
     title: 'AIOps Incident Classifier',
-    desc: 'ML-powered incident classification system that routes alerts, predicts severity, and suggests runbook actions. Integrated with PagerDuty and Slack. Reduced MTTR by 40% in production at scale.',
-    tags: ['Python', 'scikit-learn', 'Kafka', 'PagerDuty API', 'Slack API'],
+    desc: 'ML + LLM ensemble for fintech incident classification and severity routing. A scikit-learn model runs first for speed and reliability; an LLM layer enriches results when available. Integrated with PagerDuty and Slack for automated alert routing. React/Vite frontend shows live incident queue and classification confidence.',
+    tags: ['Python', 'FastAPI', 'scikit-learn', 'React', 'Vite', 'Tailwind', 'PagerDuty API', 'Slack API'],
     status: 'Production',
   },
   {
-    title: 'Platform Engineering Metrics Dashboard',
-    desc: 'DORA metrics and platform health dashboard aggregating data from GitHub, ArgoCD, Datadog, and Jira. Gives engineering leaders a single pane of glass for team performance and platform reliability.',
-    tags: ['React', 'Vite', 'Tailwind', 'Python', 'Datadog API', 'GitHub API'],
-    status: 'Production',
-  },
-  {
-    title: 'Multi-Agent Research Assistant',
-    desc: 'An orchestrated agent system for academic research — automatically searches arXiv, IEEE Xplore, and ACM DL, synthesizes related work, and generates structured literature review drafts.',
-    tags: ['LangGraph', 'Claude API', 'Tavily', 'Python', 'FastAPI'],
+    title: 'AI Compliance-as-Code',
+    desc: 'VS Code extension + FastAPI backend that performs real-time compliance analysis on source code. A regex-based static scanner extracts sensitive fields, endpoints, and data-handling patterns, then passes a structured context hint to Claude for deep analysis against GDPR, PCI DSS, and MiCA rule sets — eliminating cold-start LLM re-derivation.',
+    tags: ['Python', 'FastAPI', 'Claude API', 'TypeScript', 'VS Code Extension', 'Pydantic', 'GDPR', 'PCI DSS'],
     status: 'Beta',
   },
   {
-    title: 'SRE Runbook Automator',
-    desc: 'Converts human-written runbooks into executable automation scripts using LLMs. Supports dry-run mode, audit logging, and human-in-the-loop approval gates for destructive operations.',
-    tags: ['Python', 'Claude API', 'Kubernetes', 'Ansible', 'PostgreSQL'],
+    title: 'Test Simulation FinTech',
+    desc: 'AI-driven test scenario generation platform for compliance-critical payment flows. Dual-engine design: a deterministic rule engine (Engine A) covers known edge cases; an LLM-augmented engine (Engine B) using Ollama/Claude reasons semantically about multi-jurisdiction conflicts, threshold boundaries, and temporal fraud chains that static rules cannot enumerate. Spring Boot backend, Angular frontend.',
+    tags: ['Java', 'Spring Boot', 'Angular', 'Claude API', 'Ollama', 'H2', 'TypeScript'],
     status: 'Beta',
+  },
+  {
+    title: 'Agentic AI Dashboard for Personalized Mentorship',
+    desc: 'End-to-end AI solution that combines student performance data with syllabus knowledge to generate personalized remedial dashboards. An Agno agent runs fully locally with Ollama (llama3.2) — student data never leaves institutional infrastructure, ensuring FERPA compliance. Reads Excel data and a PDF syllabus, identifies at-risk students (score < 60%), queries syllabus embeddings via LanceDB RAG, and generates Tailwind-styled HTML dashboards with targeted study plans.',
+    tags: ['Agno Framework', 'Ollama', 'LanceDB', 'RAG', 'Python', 'Pandas', 'Tailwind CSS', 'PyPDF'],
+    status: 'Completed',
   },
 ]
 
