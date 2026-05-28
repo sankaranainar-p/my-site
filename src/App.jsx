@@ -23,7 +23,7 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={{ dark, toggle: () => setDark(d => !d) }}>
-      <div className="min-h-screen flex flex-col bg-white dark:bg-surface-950 transition-colors duration-300">
+      <div className="min-h-screen flex flex-col bg-blue-50 dark:bg-surface-950 transition-colors duration-300">
         <Navbar />
         <main className="flex-1">
           <Routes>

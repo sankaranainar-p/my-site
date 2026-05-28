@@ -62,7 +62,7 @@ function ContactForm() {
     e.preventDefault()
     const body = `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
     window.location.href =
-      `mailto:sankar.rajamanoharan@gmail.com` +
+      `mailto:p.sankarnainar@gmail.com` +
       `?subject=${encodeURIComponent(form.subject || 'Contact from sankaranainar.vercel.app')}` +
       `&body=${encodeURIComponent(body)}`
     setSent(true)
@@ -123,9 +123,9 @@ function ContactForm() {
       </button>
       <p className="text-xs text-center text-gray-400 dark:text-content-tertiary">
         Or write directly to{' '}
-        <a href="mailto:sankar.rajamanoharan@gmail.com"
+        <a href="mailto:p.sankarnainar@gmail.com"
           className="font-mono text-brand-600 dark:text-brand-400 hover:underline">
-          sankar.rajamanoharan@gmail.com
+          p.sankarnainar@gmail.com
         </a>
       </p>
     </form>
@@ -151,9 +151,9 @@ export default function Contact() {
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide mb-0.5
             text-gray-500 dark:text-content-secondary">Direct Email</p>
-          <a href="mailto:sankar.rajamanoharan@gmail.com"
+          <a href="mailto:p.sankarnainar@gmail.com"
             className="font-mono text-sm font-medium text-brand-600 dark:text-brand-400 hover:underline">
-            sankar.rajamanoharan@gmail.com
+            p.sankarnainar@gmail.com
           </a>
         </div>
       </div>

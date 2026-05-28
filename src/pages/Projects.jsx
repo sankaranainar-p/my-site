@@ -34,29 +34,29 @@ const projects = [
 ]
 
 const statusColor = {
-  Completed:  'bg-emerald-50 text-emerald-700 border-emerald-200',
-  Production: 'bg-sky-50 text-sky-700 border-sky-200',
-  Beta:       'bg-amber-50 text-amber-700 border-amber-200',
+  Completed:  'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-600/10 dark:text-emerald-400 dark:border-emerald-600/30',
+  Production: 'bg-sky-50 text-sky-700 border-sky-200 dark:bg-sky-600/10 dark:text-sky-400 dark:border-sky-600/30',
+  Beta:       'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-600/10 dark:text-amber-400 dark:border-amber-600/30',
 }
 
 export default function Projects() {
   return (
     <SectionWrapper>
-      <h1 className="section-heading">Projects</h1>
-      <p className="section-subheading">
+      <h1 className="section-heading text-gray-900 dark:text-content-primary">Projects</h1>
+      <p className="section-subheading text-gray-500 dark:text-content-secondary">
         Tools, systems, and experiments at the intersection of AI and engineering operations.
       </p>
 
       <div className="space-y-5">
         {projects.map(({ title, desc, tags, status }) => (
-          <div key={title} className="card">
+          <div key={title} className="card border-l-4 border-l-brand-600">
             <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
-              <h3 className="font-semibold text-navy-900 text-lg">{title}</h3>
+              <h3 className="font-semibold text-lg text-gray-900 dark:text-content-primary">{title}</h3>
               <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border shrink-0 ${statusColor[status]}`}>
                 {status}
               </span>
             </div>
-            <p className="text-gray-500 text-sm leading-relaxed mb-4">{desc}</p>
+            <p className="text-sm leading-relaxed mb-4 text-gray-500 dark:text-content-secondary">{desc}</p>
             <div className="flex flex-wrap gap-2">
               {tags.map(tag => (
                 <span key={tag} className="badge">{tag}</span>

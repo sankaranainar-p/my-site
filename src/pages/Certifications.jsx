@@ -140,14 +140,14 @@ const certifications = [
 const categories = ['All', 'AI & Prompt Engineering', 'Leadership & Management', 'Cloud & DevOps', 'Peer Review']
 
 const categoryColor = {
-  'AI & Prompt Engineering': 'bg-navy-50 text-navy-700 border-navy-200',
-  'Leadership & Management': 'bg-purple-50 text-purple-700 border-purple-200',
-  'Cloud & DevOps':          'bg-sky-50 text-sky-700 border-sky-200',
-  'Peer Review':             'bg-emerald-50 text-emerald-700 border-emerald-200',
+  'AI & Prompt Engineering': 'bg-navy-50 text-navy-700 border-navy-200 dark:bg-brand-600/10 dark:text-brand-400 dark:border-brand-600/30',
+  'Leadership & Management': 'bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-600/10 dark:text-purple-400 dark:border-purple-600/30',
+  'Cloud & DevOps':          'bg-sky-50 text-sky-700 border-sky-200 dark:bg-sky-600/10 dark:text-sky-400 dark:border-sky-600/30',
+  'Peer Review':             'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-600/10 dark:text-emerald-400 dark:border-emerald-600/30',
 }
 
 const categoryAccent = {
-  'AI & Prompt Engineering': 'border-l-navy-700',
+  'AI & Prompt Engineering': 'border-l-brand-600',
   'Leadership & Management': 'border-l-purple-500',
   'Cloud & DevOps':          'border-l-sky-500',
   'Peer Review':             'border-l-emerald-500',
@@ -159,8 +159,8 @@ export default function Certifications() {
 
   return (
     <SectionWrapper>
-      <h1 className="section-heading">Certifications</h1>
-      <p className="section-subheading">
+      <h1 className="section-heading text-gray-900 dark:text-content-primary">Certifications</h1>
+      <p className="section-subheading text-gray-500 dark:text-content-secondary">
         Continuous learning across AI, engineering leadership, and cloud operations.
       </p>
 
@@ -172,8 +172,8 @@ export default function Certifications() {
             onClick={() => setActive(cat)}
             className={`px-4 py-1.5 rounded-full text-sm font-medium border transition-colors ${
               active === cat
-                ? 'bg-navy-800 border-navy-800 text-white'
-                : 'border-gray-300 text-gray-500 hover:border-navy-800 hover:text-navy-800'
+                ? 'bg-brand-600 border-brand-600 text-white'
+                : 'border-gray-300 dark:border-surface-500 text-gray-500 dark:text-content-secondary hover:border-brand-600 hover:text-brand-600 dark:hover:border-brand-500 dark:hover:text-brand-400'
             }`}
           >
             {cat}
@@ -186,12 +186,12 @@ export default function Certifications() {
         {filtered.map(({ title, issuer, issued, credentialId, category }) => (
           <div key={title} className={`card border-l-4 ${categoryAccent[category]} flex flex-wrap items-start justify-between gap-4`}>
             <div className="flex-1 min-w-0">
-              <h3 className="font-semibold text-navy-900 mb-1">{title}</h3>
-              <p className="text-sm text-gray-500">{issuer}</p>
+              <h3 className="font-semibold mb-1 text-gray-900 dark:text-content-primary">{title}</h3>
+              <p className="text-sm text-gray-500 dark:text-content-secondary">{issuer}</p>
               <div className="flex flex-wrap items-center gap-3 mt-2">
-                <span className="text-xs text-gray-400">Issued {issued}</span>
+                <span className="text-xs text-gray-400 dark:text-content-tertiary font-mono">Issued {issued}</span>
                 {credentialId && (
-                  <span className="text-xs text-gray-400 font-mono">ID: {credentialId}</span>
+                  <span className="text-xs text-gray-400 dark:text-content-tertiary font-mono">ID: {credentialId}</span>
                 )}
               </div>
             </div>
@@ -202,7 +202,9 @@ export default function Certifications() {
         ))}
       </div>
 
-      <p className="mt-8 text-sm text-gray-400 text-center">{certifications.length} certifications total</p>
+      <p className="mt-8 text-sm text-center text-gray-400 dark:text-content-tertiary font-mono">
+        {certifications.length} certifications total
+      </p>
     </SectionWrapper>
   )
 }
