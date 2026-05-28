@@ -4,11 +4,18 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sankar — Software Engineering Manager, IEEE Senior Member, Agentic AI Researcher" />
+    <meta name="description" content="Sankar — Software Engineering Manager at Mastercard, IEEE Senior Member, Agentic AI Researcher" />
     <title>Sankar | Engineering Leader & Researcher</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <!-- Prevent flash of wrong theme -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem('theme');
+        if (saved !== 'light') document.documentElement.classList.add('dark');
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

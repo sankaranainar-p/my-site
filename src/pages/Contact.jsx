@@ -1,4 +1,14 @@
+import { useState } from 'react'
 import SectionWrapper from '../components/SectionWrapper'
+
+const topics = [
+  'Research collaboration',
+  'Conference speaking invitations',
+  'Engineering leadership advisory',
+  'Agentic AI consulting',
+  'IEEE activities and volunteering',
+  'FinTech & B2B platform engineering',
+]
 
 const channels = [
   {
@@ -10,7 +20,7 @@ const channels = [
     label: 'LinkedIn',
     value: 'linkedin.com/in/sankaranainarparamasivan',
     href: 'https://www.linkedin.com/in/sankaranainarparamasivan/',
-    desc: 'Professional updates, articles, and connections',
+    desc: 'Professional updates and connections',
   },
   {
     icon: (
@@ -25,77 +35,186 @@ const channels = [
   },
   {
     icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      <svg viewBox="0 0 256 256" className="w-5 h-5 shrink-0" fill="none">
+        <circle cx="128" cy="128" r="128" fill="#a6ce39"/>
+        <circle cx="86" cy="86" r="16" fill="white"/>
+        <rect x="70" y="112" width="32" height="80" rx="4" fill="white"/>
+        <path d="M120 86h44c28 0 48 18 48 46s-20 46-48 46h-44V86z" fill="white"/>
+        <path d="M136 102h26c18 0 30 10 30 30s-12 30-30 30h-26V102z" fill="#a6ce39"/>
       </svg>
     ),
-    label: 'Email',
-    value: 'Available via LinkedIn',
-    href: 'https://www.linkedin.com/in/sankaranainarparamasivan/',
-    desc: 'For research, speaking, and collaboration inquiries',
+    label: 'ORCID',
+    value: '0009-0006-1738-3863',
+    href: 'https://orcid.org/0009-0006-1738-3863',
+    desc: 'Publications and research profile',
   },
 ]
 
-const topics = [
-  'Research collaboration',
-  'Conference speaking invitations',
-  'Engineering leadership advisory',
-  'Agentic AI consulting',
-  'IEEE activities and volunteering',
-  'FinTech & B2B platform engineering',
-]
+const INITIAL = { name: '', email: '', subject: '', message: '' }
+
+function ContactForm() {
+  const [form, setForm] = useState(INITIAL)
+  const [sent, setSent] = useState(false)
+
+  const set = field => e => setForm(f => ({ ...f, [field]: e.target.value }))
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const body = `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+    window.location.href =
+      `mailto:sankar.rajamanoharan@gmail.com` +
+      `?subject=${encodeURIComponent(form.subject || 'Contact from sankaranainar.vercel.app')}` +
+      `&body=${encodeURIComponent(body)}`
+    setSent(true)
+    setTimeout(() => setSent(false), 4000)
+  }
+
+  const inputCls = `w-full px-4 py-2.5 rounded-lg text-sm transition-colors duration-150 outline-none
+    border bg-white dark:bg-surface-700 text-gray-900 dark:text-content-primary
+    border-gray-200 dark:border-surface-500
+    focus:border-brand-500 dark:focus:border-brand-500 focus:ring-1 focus:ring-brand-500/30
+    placeholder:text-gray-400 dark:placeholder:text-content-tertiary`
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label className="block text-xs font-semibold mb-1.5 uppercase tracking-wide
+            text-gray-500 dark:text-content-secondary">Name</label>
+          <input type="text" required placeholder="Your name"
+            value={form.name} onChange={set('name')} className={inputCls} />
+        </div>
+        <div>
+          <label className="block text-xs font-semibold mb-1.5 uppercase tracking-wide
+            text-gray-500 dark:text-content-secondary">Email</label>
+          <input type="email" required placeholder="you@organization.com"
+            value={form.email} onChange={set('email')} className={inputCls} />
+        </div>
+      </div>
+      <div>
+        <label className="block text-xs font-semibold mb-1.5 uppercase tracking-wide
+          text-gray-500 dark:text-content-secondary">Subject</label>
+        <input type="text" required placeholder="e.g. Research collaboration on Agentic AI"
+          value={form.subject} onChange={set('subject')} className={inputCls} />
+      </div>
+      <div>
+        <label className="block text-xs font-semibold mb-1.5 uppercase tracking-wide
+          text-gray-500 dark:text-content-secondary">Message</label>
+        <textarea required rows={5} value={form.message} onChange={set('message')}
+          placeholder="Describe your inquiry — for speaking invitations please include event name, date, expected audience, and topic."
+          className={`${inputCls} resize-none`} />
+      </div>
+      <button type="submit" className="btn-primary w-full justify-center">
+        {sent ? (
+          <>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            Opening your email client…
+          </>
+        ) : (
+          <>
+            Send Message
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+          </>
+        )}
+      </button>
+      <p className="text-xs text-center text-gray-400 dark:text-content-tertiary">
+        Or write directly to{' '}
+        <a href="mailto:sankar.rajamanoharan@gmail.com"
+          className="font-mono text-brand-600 dark:text-brand-400 hover:underline">
+          sankar.rajamanoharan@gmail.com
+        </a>
+      </p>
+    </form>
+  )
+}
 
 export default function Contact() {
   return (
     <SectionWrapper>
-      <h1 className="section-heading">Contact</h1>
+      <h1 className="section-heading text-gray-900 dark:text-content-primary">Contact</h1>
       <p className="section-subheading">
         Open to meaningful conversations about research, engineering, and innovation.
       </p>
 
-      <div className="grid lg:grid-cols-2 gap-10">
-        {/* Channels */}
+      {/* Direct email highlight */}
+      <div className="mb-10 p-4 rounded-xl flex items-center gap-4
+        bg-brand-600/5 border border-brand-600/20 dark:bg-brand-600/10 dark:border-brand-500/25">
+        <div className="shrink-0 w-10 h-10 rounded-lg bg-brand-600 flex items-center justify-center shadow-sm">
+          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </div>
         <div>
-          <h2 className="text-lg font-semibold text-navy-800 mb-5">Reach Out</h2>
-          <div className="space-y-4">
-            {channels.map(({ icon, label, value, href, desc }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noreferrer"
-                className="card flex items-start gap-4 group hover:border-navy-300"
-              >
-                <span className="mt-0.5 text-navy-600 shrink-0">{icon}</span>
-                <div className="min-w-0">
-                  <p className="font-semibold text-navy-900 group-hover:text-navy-600 transition-colors">{label}</p>
-                  <p className="text-sm text-gray-500 truncate">{value}</p>
-                  <p className="text-xs text-gray-400 mt-0.5">{desc}</p>
-                </div>
-              </a>
-            ))}
-          </div>
+          <p className="text-xs font-semibold uppercase tracking-wide mb-0.5
+            text-gray-500 dark:text-content-secondary">Direct Email</p>
+          <a href="mailto:sankar.rajamanoharan@gmail.com"
+            className="font-mono text-sm font-medium text-brand-600 dark:text-brand-400 hover:underline">
+            sankar.rajamanoharan@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div className="grid lg:grid-cols-2 gap-10">
+        {/* Form */}
+        <div>
+          <h2 className="text-lg font-semibold tracking-tight mb-5 text-gray-900 dark:text-content-primary">
+            Send a Message
+          </h2>
+          <ContactForm />
         </div>
 
-        {/* Topics */}
-        <div>
-          <h2 className="text-lg font-semibold text-navy-800 mb-5">I'm Happy to Discuss</h2>
-          <div className="card mb-6">
-            <ul className="space-y-3">
-              {topics.map(topic => (
-                <li key={topic} className="flex items-center gap-3 text-gray-700 text-sm">
-                  <span className="w-1.5 h-1.5 rounded-full bg-navy-600 shrink-0" />
-                  {topic}
-                </li>
+        {/* Right panel */}
+        <div className="space-y-8">
+          <div>
+            <h2 className="text-lg font-semibold tracking-tight mb-4 text-gray-900 dark:text-content-primary">
+              Other Channels
+            </h2>
+            <div className="space-y-3">
+              {channels.map(({ icon, label, value, href, desc }) => (
+                <a key={label} href={href} target="_blank" rel="noreferrer"
+                  className="card flex items-start gap-4 group hover:border-brand-500/40">
+                  <span className="mt-0.5 shrink-0 text-gray-500 dark:text-content-secondary
+                    group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                    {icon}
+                  </span>
+                  <div className="min-w-0">
+                    <p className="font-semibold text-gray-900 dark:text-content-primary
+                      group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                      {label}
+                    </p>
+                    <p className="text-xs font-mono text-gray-500 dark:text-content-secondary truncate">{value}</p>
+                    <p className="text-xs text-gray-400 dark:text-content-tertiary mt-0.5">{desc}</p>
+                  </div>
+                </a>
               ))}
-            </ul>
+            </div>
           </div>
 
-          <div className="card bg-navy-50 border-navy-200">
-            <p className="text-sm text-gray-700 leading-relaxed">
-              <span className="font-semibold text-navy-900">Note:</span> I do my best to respond
-              to all meaningful inquiries within a few business days. For speaking invitations,
-              please include the event name, date, expected audience, and topic of interest.
+          <div>
+            <h2 className="text-lg font-semibold tracking-tight mb-4 text-gray-900 dark:text-content-primary">
+              I'm Happy to Discuss
+            </h2>
+            <div className="card">
+              <ul className="space-y-2.5">
+                {topics.map(topic => (
+                  <li key={topic} className="flex items-center gap-3 text-sm text-gray-700 dark:text-content-secondary">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-600 dark:bg-brand-400 shrink-0" />
+                    {topic}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="card border-l-4 border-l-brand-600">
+            <p className="text-sm leading-relaxed text-gray-700 dark:text-content-secondary">
+              <span className="font-semibold text-gray-900 dark:text-content-primary">Response time:</span>{' '}
+              I aim to reply to all meaningful inquiries within a few business days. For speaking
+              invitations, please include the event name, date, expected audience, and topic.
             </p>
           </div>
         </div>
