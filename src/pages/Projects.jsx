@@ -1,4 +1,5 @@
 import SectionWrapper from '../components/SectionWrapper'
+import SEO from '../components/SEO'
 
 const projects = [
   {
@@ -42,6 +43,12 @@ const statusColor = {
 export default function Projects() {
   return (
     <SectionWrapper>
+      <SEO
+        title="AI & Engineering Projects | Sankaranainar Parmasivan"
+        description="AI and engineering projects by Sankaranainar Parmasivan — tools and systems at the intersection of Agentic AI, AIOps, FinTech, and platform engineering."
+        canonical="https://sankaranainar.dev/projects"
+        ogType="website"
+      />
       <h1 className="section-heading text-gray-900 dark:text-content-primary">Projects</h1>
       <p className="section-subheading text-gray-500 dark:text-content-secondary">
         Tools, systems, and experiments at the intersection of AI and engineering operations.

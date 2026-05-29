@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sankaranainar.dev/sitemap.xml

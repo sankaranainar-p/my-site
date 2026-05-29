@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import SectionWrapper from '../components/SectionWrapper'
+import SEO from '../components/SEO'
 
 const topics = [
   'Research collaboration',
@@ -135,6 +136,12 @@ function ContactForm() {
 export default function Contact() {
   return (
     <SectionWrapper>
+      <SEO
+        title="Contact Sankaranainar Parmasivan"
+        description="Get in touch with Sankaranainar Parmasivan for research collaborations, conference invitations, advisory roles, and engineering leadership conversations."
+        canonical="https://sankaranainar.dev/contact"
+        ogType="website"
+      />
       <h1 className="section-heading text-gray-900 dark:text-content-primary">Contact</h1>
       <p className="section-subheading">
         Open to meaningful conversations about research, engineering, and innovation.

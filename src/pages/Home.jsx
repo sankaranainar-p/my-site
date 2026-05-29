@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SectionWrapper from '../components/SectionWrapper'
+import SEO from '../components/SEO'
 
 // ── Typewriter ─────────────────────────────────────────────────────────────
 
@@ -161,6 +162,12 @@ function OrcidIcon() {
 export default function Home() {
   return (
     <>
+      <SEO
+        title="Sankaranainar Parmasivan | Engineering Leader & AI Researcher"
+        description="Sankaranainar Parmasivan — Software Engineering Manager at Mastercard, IEEE Senior Member, Agentic AI Researcher. 15+ years in FinTech and autonomous AI systems."
+        canonical="https://sankaranainar.dev"
+        includeSchema
+      />
       {/* ── Hero ── */}
       <div className="relative min-h-screen flex items-center overflow-hidden
         bg-white dark:bg-surface-950 transition-colors duration-300">

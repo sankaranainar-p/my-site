@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import SectionWrapper from '../components/SectionWrapper'
+import SEO from '../components/SEO'
 
 const certifications = [
   {
@@ -159,6 +160,12 @@ export default function Certifications() {
 
   return (
     <SectionWrapper>
+      <SEO
+        title="Certifications | Sankaranainar Parmasivan"
+        description="Professional certifications held by Sankaranainar Parmasivan, including credentials from Google, Vanderbilt, Adobe, and UIUC Gies College of Business in AI, cloud, DevOps, and leadership."
+        canonical="https://sankaranainar.dev/certifications"
+        ogType="website"
+      />
       <h1 className="section-heading text-gray-900 dark:text-content-primary">Certifications</h1>
       <p className="section-subheading text-gray-500 dark:text-content-secondary">
         Continuous learning across AI, engineering leadership, and cloud operations.

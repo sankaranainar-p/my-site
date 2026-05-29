@@ -1,4 +1,5 @@
 import SectionWrapper from '../components/SectionWrapper'
+import SEO from '../components/SEO'
 
 const focusAreas = [
   {
@@ -151,6 +152,12 @@ function OrcidIcon() {
 export default function Research() {
   return (
     <SectionWrapper>
+      <SEO
+        title="Research & Publications | Sankaranainar Parmasivan"
+        description="Research by Sankaranainar Parmasivan on Agentic AI systems, AIOps, MLOps, and autonomous multi-agent orchestration. IEEE Senior Member and independent researcher."
+        canonical="https://sankaranainar.dev/research"
+        ogType="website"
+      />
       <h1 className="section-heading text-gray-900 dark:text-content-primary">Research</h1>
       <p className="section-subheading">
         Exploring the intersection of autonomous AI systems, intelligent operations, and platform engineering.
