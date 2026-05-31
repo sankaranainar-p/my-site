@@ -3,6 +3,12 @@ import SEO from '../components/SEO'
 
 const projects = [
   {
+    title: 'Enterprise AI Efficiency Program',
+    desc: "Leading Mastercard's enterprise-wide AI efficiency initiative — driving Agentic AI adoption across engineering teams, establishing AI governance frameworks, and integrating LLM-based automation into CI/CD pipelines powered by Jenkins. Measurable outcomes include accelerated delivery cycles and reduced manual toil across 20+ engineering teams.",
+    tags: ['Agentic AI', 'Jenkins', 'LLM', 'Java', 'Spring Boot', 'Azure', 'Kubernetes', 'AI Governance', 'FinTech'],
+    status: 'Active',
+  },
+  {
     title: 'AI Payment Reliability Engine',
     desc: 'Agentic 5-layer incident response loop for payment systems: classify → root cause analysis → remediate → verify → log. Combines a scikit-learn ML classifier with a Groq/Ollama LLM ensemble for structured triage and RCA generation. Exposes a FastAPI backend with SSE streaming and a React dashboard for real-time incident tracking.',
     tags: ['Python', 'FastAPI', 'scikit-learn', 'Groq', 'Ollama', 'React', 'Vite', 'Tailwind', 'SSE'],
@@ -35,6 +41,7 @@ const projects = [
 ]
 
 const statusColor = {
+  Active:     'bg-orange-50 text-orange-700 border-orange-200 dark:bg-orange-600/10 dark:text-orange-400 dark:border-orange-600/30',
   Completed:  'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-600/10 dark:text-emerald-400 dark:border-emerald-600/30',
   Production: 'bg-sky-50 text-sky-700 border-sky-200 dark:bg-sky-600/10 dark:text-sky-400 dark:border-sky-600/30',
   Beta:       'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-600/10 dark:text-amber-400 dark:border-amber-600/30',

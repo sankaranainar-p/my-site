@@ -95,7 +95,7 @@ const credentials = [
     icon: '🏦',
     title: 'Software Engineering Manager',
     org: 'Mastercard',
-    desc: 'Leading software engineering teams building B2B applications in the FinTech world.',
+    desc: 'Leading distributed systems and AI-driven engineering teams in the FinTech space. Driving CI/CD modernization via Jenkins pipeline architecture across 20+ teams and spearheading enterprise Agentic AI adoption.',
   },
   {
     icon: '⚡',
@@ -107,7 +107,7 @@ const credentials = [
     icon: '🧠',
     title: 'Researcher — Agentic AI & AIOps',
     org: 'Independent Research',
-    desc: 'Publishing and speaking on LLM-based autonomous agents, multi-agent orchestration, and AI-driven operations.',
+    desc: 'Leading enterprise AI efficiency initiatives and Agentic AI adoption at Mastercard. Publishing and speaking on LLM-based autonomous agents, multi-agent orchestration, and AI-driven operations at scale.',
   },
   {
     icon: '🎓',
@@ -127,19 +127,24 @@ const highlights = [
 
 const skillGroups = [
   {
-    label: 'Primary',
+    label: 'AI & Research',
     colorClass: 'bg-brand-600/10 text-brand-400 border-brand-600/30 hover:border-brand-500/60 dark:bg-brand-600/10 dark:text-brand-400 dark:border-brand-600/30',
-    skills: ['Java', 'Spring Boot', 'Angular', 'Kafka', 'Agentic AI', 'React'],
+    skills: ['Agentic AI', 'LLM Orchestration', 'Multi-Agent Systems', 'MLOps', 'AIOps', 'AI Compliance', 'Explainable AI'],
   },
   {
-    label: 'Infrastructure',
+    label: 'Engineering',
     colorClass: 'bg-purple-600/10 text-purple-400 border-purple-600/30 hover:border-purple-500/60',
-    skills: ['Azure', 'Kubernetes', 'Docker', 'Terraform'],
+    skills: ['Java', 'Spring Boot', 'Angular', 'Kafka', 'React', 'TypeScript', 'Python', 'FastAPI'],
+  },
+  {
+    label: 'DevOps & CI/CD',
+    colorClass: 'bg-emerald-600/10 text-emerald-400 border-emerald-600/30 hover:border-emerald-500/60',
+    skills: ['Jenkins', 'Kubernetes', 'Docker', 'Azure', 'Terraform', 'GitHub Actions'],
   },
   {
     label: 'Observability',
     colorClass: 'bg-amber-600/10 text-amber-400 border-amber-600/30 hover:border-amber-500/60',
-    skills: ['Splunk', 'Dynatrace', 'AIOps'],
+    skills: ['Splunk', 'Dynatrace', 'SLO/SLI/SLA', 'Incident Response', 'Self-Healing Infrastructure'],
   },
 ]
 
@@ -182,14 +187,6 @@ export default function Home() {
 
             {/* Text block */}
             <div className="flex-1 text-center lg:text-left">
-              {/* Open badge */}
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold mb-7
-                bg-brand-600/10 text-brand-600 border border-brand-600/30
-                dark:bg-brand-600/15 dark:text-brand-400 dark:border-brand-500/30">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />
-                Open to Research Collaborations
-              </span>
-
               {/* Name */}
               <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[1.05] tracking-tight mb-4
                 text-gray-900 dark:text-content-primary">
