@@ -130,7 +130,6 @@ const skillGroups = [
     label: 'AI & Research',
     colorClass: 'bg-brand-600/10 text-brand-400 border-brand-600/30 hover:border-brand-500/60 dark:bg-brand-600/10 dark:text-brand-400 dark:border-brand-600/30',
     skills: ['Agentic AI', 'AI Compliance', 'AIOps', 'AI efficiency', 'AI Solutions'],
-    note: 'Currently leading enterprise-scale Agentic AI adoption and AI efficiency programs in FinTech — driving LLM integration into CI/CD pipelines and engineering workflows across distributed teams.',
   },
   {
     label: 'Engineering',
