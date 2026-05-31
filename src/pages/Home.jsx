@@ -153,9 +153,7 @@ const skillGroups = [
 
 function IEEEIcon() {
   return (
-    <svg viewBox="0 0 44 18" className="h-4 w-auto shrink-0" fill="currentColor" aria-hidden="true">
-      <text x="0" y="15" fontSize="15" fontWeight="800" fontFamily="Arial, sans-serif" letterSpacing="0.5">IEEE</text>
-    </svg>
+    <img src="/ieee-logo.webp" alt="IEEE" className="h-4 w-auto shrink-0" />
   )
 }
 
@@ -252,7 +250,7 @@ export default function Home() {
               <div className="relative w-52 h-52 sm:w-64 sm:h-64 rounded-full overflow-hidden
                 ring-2 ring-brand-600/60 shadow-glow-brand">
                 <img
-                  src="/profile.jpeg"
+                  src="/new-profile-pic.jpg"
                   alt="Sankar — Software Engineering Manager"
                   className="w-full h-full object-cover object-top"
                 />
