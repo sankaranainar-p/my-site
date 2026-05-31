@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import SectionWrapper from '../components/SectionWrapper'
 import SEO from '../components/SEO'
 
@@ -52,6 +53,7 @@ const publications = [
     type: 'Conference',
     status: 'In Press',
     doi: null,
+    abstract: 'Explores the application of AI-augmented monitoring and automated compliance validation in SRE workflows for financial systems. Proposes a self-healing infrastructure model that reduces mean-time-to-resolution while maintaining regulatory compliance in high-availability FinTech environments.',
   },
   {
     title: 'Orchestrating AI Microservices for Adaptive Fraud Detection and Compliance in Modern Financial Systems',
@@ -61,6 +63,7 @@ const publications = [
     status: 'In Press',
     doi: null,
     coAuthors: 'Kathiresan Jayabalan, Sethuraman Radhakrishnan',
+    abstract: 'Presents a microservices orchestration framework that applies adaptive AI models for real-time fraud detection across multi-jurisdiction financial platforms. Demonstrates measurable improvement in detection accuracy while maintaining compliance with GDPR, PCI DSS, and MICA regulatory frameworks.',
   },
 ]
 
@@ -98,12 +101,14 @@ const statusBadge = {
 
 const talks = [
   {
-    title: 'Agentic AI for Autonomous Incident Response in Enterprise Infrastructure',
+    title: 'Autonomous Testing: Bridging MLOps with Self-Learning Validation Systems',
     event: 'IEEE SoutheastCon 2026 Workshop',
-    venue: 'IEEE Southeast Conference',
+    venue: 'IEEE SoutheastCon 2026 — IEEE Southeast Conference',
     year: '2026',
+    type: 'Workshop Tutorial',
     coPresenter: 'Dr. Ravi Gollapalli, University of North Alabama (UNA)',
-    abstract: 'Presents a multi-agent LangGraph architecture for zero-touch incident resolution in Kubernetes environments, with empirical evaluation on real-world SRE datasets.',
+    abstract: 'Presented a workshop on integrating self-learning test validation systems with MLOps pipelines for autonomous quality assurance in enterprise AI deployments.',
+    featured: true,
   },
   {
     title: 'Faculty Development Programme on Emerging AI Technologies',
@@ -150,6 +155,8 @@ function OrcidIcon() {
 }
 
 export default function Research() {
+  const [openAbstract, setOpenAbstract] = useState(null)
+
   return (
     <SectionWrapper>
       <SEO
@@ -164,20 +171,19 @@ export default function Research() {
       </p>
 
       {/* Researcher profiles */}
-      <div className="flex flex-wrap gap-3 mb-10">
-        <a
-          href="https://orcid.org/0009-0006-1738-3863"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg border-2 border-[#a6ce39]/60
-            text-[#4a7c2f] dark:text-[#a6ce39] hover:bg-[#a6ce39]/10 font-medium transition-all duration-200"
-        >
-          <OrcidIcon />
-          View ORCID Profile — 0009-0006-1738-3863
-          <svg className="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-        </a>
+      <div className="flex flex-wrap gap-4 mb-10">
+        <div className="border-l-4 border-l-[#a6ce39] pl-4">
+          <a
+            href="https://orcid.org/0009-0006-1738-3863"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg border-2 border-[#a6ce39]/60
+              text-[#4a7c2f] dark:text-[#a6ce39] hover:bg-[#a6ce39]/10 font-medium transition-all duration-200"
+          >
+            <OrcidIcon />
+            0009-0006-1738-3863 ↗
+          </a>
+        </div>
         <a
           href="https://www.webofscience.com/wos/author/record/NWG-8160-2025"
           target="_blank"
@@ -188,10 +194,7 @@ export default function Research() {
           <svg viewBox="0 0 48 24" className="h-4 w-auto shrink-0" fill="currentColor" aria-hidden="true">
             <text x="0" y="18" fontSize="16" fontWeight="800" fontFamily="Arial, sans-serif" letterSpacing="0.5">WoS</text>
           </svg>
-          Web of Science — NWG-8160-2025
-          <svg className="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
+          Web of Science — NWG-8160-2025 ↗
         </a>
       </div>
 
@@ -213,7 +216,7 @@ export default function Research() {
         Publications
       </h2>
       <div className="space-y-4 mb-10">
-        {publications.map(({ title, venue, year, type, status, doi, coAuthors }) => (
+        {publications.map(({ title, venue, year, type, status, doi, coAuthors, abstract }) => (
           <div key={title} className="card">
             <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
               <div className="flex-1 min-w-0">
@@ -228,19 +231,33 @@ export default function Research() {
                 </span>
               </div>
             </div>
-            {doi && (
-              <a
-                href={doi}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-mono transition-colors duration-150
-                  text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300"
-              >
-                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-                {doi.replace('https://doi.org/', 'DOI: ')}
-              </a>
+            <div className="flex flex-wrap items-center gap-4">
+              {doi && (
+                <a
+                  href={doi}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-xs font-mono transition-colors duration-150
+                    text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300"
+                >
+                  {doi.replace('https://doi.org/', 'DOI: ')} ↗
+                </a>
+              )}
+              {abstract && (
+                <button
+                  onClick={() => setOpenAbstract(openAbstract === title ? null : title)}
+                  className="text-xs font-medium transition-colors duration-150
+                    text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300"
+                >
+                  {openAbstract === title ? 'Hide Abstract ↑' : 'Read Abstract ↓'}
+                </button>
+              )}
+            </div>
+            {abstract && openAbstract === title && (
+              <p className="mt-3 text-sm leading-relaxed text-gray-500 dark:text-content-secondary
+                border-l-2 border-brand-600/40 pl-3 italic">
+                {abstract}
+              </p>
             )}
           </div>
         ))}
@@ -274,12 +291,15 @@ export default function Research() {
         Speaking & Presentations
       </h2>
       <div className="space-y-4 mb-14">
-        {talks.map(({ title, venue, year, coPresenter, abstract }) => (
-          <div key={title} className="card">
+        {talks.map(({ title, venue, year, coPresenter, abstract, type, featured }) => (
+          <div key={title} className={`card ${featured ? 'border-l-4 border-l-brand-600' : ''}`}>
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div className="flex-1 min-w-0">
                 <h3 className="font-medium mb-1 leading-snug text-gray-900 dark:text-content-primary">{title}</h3>
                 <p className="text-sm text-gray-500 dark:text-content-secondary">{venue}</p>
+                {type && (
+                  <p className="text-xs text-brand-600 dark:text-brand-400 font-medium mt-0.5">{type}</p>
+                )}
                 {coPresenter && (
                   <p className="text-xs text-gray-400 dark:text-content-tertiary mt-1">
                     Co-presenter: {coPresenter}
@@ -298,9 +318,14 @@ export default function Research() {
       </div>
 
       {/* Peer Reviews */}
-      <h2 className="text-xl font-semibold tracking-tight mb-5 text-gray-900 dark:text-content-primary">
-        Peer Review Service
-      </h2>
+      <div className="border-l-4 border-l-brand-600 pl-4 mb-5">
+        <h2 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-content-primary">
+          Professional Peer Review &amp; Editorial Board Service
+        </h2>
+        <p className="mt-1 text-sm font-semibold text-brand-600 dark:text-brand-400">
+          40+ papers reviewed across IEEE, Springer, and Elsevier venues — spanning AI, distributed systems, FinTech, and cybersecurity.
+        </p>
+      </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {reviews.map(({ venue, year, count }) => (
           <div key={venue} className="card flex items-start justify-between gap-4">

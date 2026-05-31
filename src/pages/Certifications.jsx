@@ -201,6 +201,17 @@ export default function Certifications() {
                   <span className="text-xs text-gray-400 dark:text-content-tertiary font-mono">ID: {credentialId}</span>
                 )}
               </div>
+              {credentialId && (
+                <a
+                  href={`https://coursera.org/verify/${credentialId}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 mt-1.5 text-xs font-medium
+                    text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300 transition-colors"
+                >
+                  Verify Credential ↗
+                </a>
+              )}
             </div>
             <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border shrink-0 ${categoryColor[category]}`}>
               {category}
