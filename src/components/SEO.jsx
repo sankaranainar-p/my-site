@@ -39,7 +39,7 @@ export default function SEO({
       <meta name="author" content="Sankaranainar Parmasivan" />
       <meta
         name="keywords"
-        content="Sankaranainar Parmasivan, Agentic AI, Software Engineering Manager, Mastercard, IEEE Senior Member, AIOps, FinTech, MLOps, Jenkins, CI/CD, AI Leadership, Enterprise AI, LLM Orchestration, Distributed Systems"
+        content="Sankaranainar Parmasivan, Agentic AI, Software Engineering Manager, Mastercard, IEEE Senior Member, AIOps, FinTech, MLOps, Jenkins, CI/CD, AI Leadership, Enterprise AI, LLM Orchestration, Distributed Systems, Autonomous Incident Resolution, Self-Healing Infrastructure"
       />
       <link rel="canonical" href={canonical} />
 

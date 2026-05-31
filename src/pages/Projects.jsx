@@ -3,10 +3,10 @@ import SEO from '../components/SEO'
 
 const projects = [
   {
-    title: 'Enterprise AI Efficiency Program',
-    desc: "Leading Mastercard's enterprise-wide AI efficiency initiative — driving Agentic AI adoption across engineering teams, establishing AI governance frameworks, and integrating LLM-based automation into CI/CD pipelines powered by Jenkins. Measurable outcomes include accelerated delivery cycles and reduced manual toil across 20+ engineering teams.",
-    tags: ['Agentic AI', 'Jenkins', 'LLM', 'Java', 'Spring Boot', 'Azure', 'Kubernetes', 'AI Governance', 'FinTech'],
-    status: 'Active',
+    title: 'Autonomous Incident Resolution via AIOps',
+    desc: 'An AIOps-powered autonomous incident resolution system that detects, classifies, and remediates infrastructure incidents without human intervention. Combines real-time telemetry ingestion, ML-based anomaly detection, and LLM-driven root cause analysis to generate and execute remediation playbooks automatically. Designed for enterprise-scale distributed systems with Splunk and Dynatrace as observability backends.',
+    tags: ['Python', 'FastAPI', 'LangChain', 'Splunk API', 'Dynatrace API', 'Kafka', 'Redis', 'React', 'Agentic AI', 'AIOps', 'MLOps'],
+    status: 'In Progress',
   },
   {
     title: 'AI Payment Reliability Engine',
@@ -30,7 +30,7 @@ const projects = [
     title: 'Test Simulation FinTech',
     desc: 'AI-driven test scenario generation platform for compliance-critical payment flows. Dual-engine design: a deterministic rule engine (Engine A) covers known edge cases; an LLM-augmented engine (Engine B) using Ollama/Claude reasons semantically about multi-jurisdiction conflicts, threshold boundaries, and temporal fraud chains that static rules cannot enumerate. Spring Boot backend, Angular frontend.',
     tags: ['Java', 'Spring Boot', 'Angular', 'Claude API', 'Ollama', 'H2', 'TypeScript'],
-    status: 'Beta',
+    status: 'Completed',
   },
   {
     title: 'Agentic AI Dashboard for Personalized Mentorship',
@@ -41,10 +41,10 @@ const projects = [
 ]
 
 const statusColor = {
-  Active:     'bg-orange-50 text-orange-700 border-orange-200 dark:bg-orange-600/10 dark:text-orange-400 dark:border-orange-600/30',
-  Completed:  'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-600/10 dark:text-emerald-400 dark:border-emerald-600/30',
-  Production: 'bg-sky-50 text-sky-700 border-sky-200 dark:bg-sky-600/10 dark:text-sky-400 dark:border-sky-600/30',
-  Beta:       'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-600/10 dark:text-amber-400 dark:border-amber-600/30',
+  'In Progress': 'bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-600/10 dark:text-blue-400 dark:border-blue-600/30',
+  Completed:     'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-600/10 dark:text-emerald-400 dark:border-emerald-600/30',
+  Production:    'bg-sky-50 text-sky-700 border-sky-200 dark:bg-sky-600/10 dark:text-sky-400 dark:border-sky-600/30',
+  Beta:          'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-600/10 dark:text-amber-400 dark:border-amber-600/30',
 }
 
 export default function Projects() {

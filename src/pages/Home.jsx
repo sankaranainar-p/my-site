@@ -95,7 +95,7 @@ const credentials = [
     icon: '🏦',
     title: 'Software Engineering Manager',
     org: 'Mastercard',
-    desc: 'Leading distributed systems and AI-driven engineering teams in the FinTech space. Driving CI/CD modernization via Jenkins pipeline architecture across 20+ teams and spearheading enterprise Agentic AI adoption.',
+    desc: 'Leading distributed systems and AI-driven engineering teams in the FinTech space. Spearheading enterprise Agentic AI adoption and driving scalable B2B solutions, CI/CD modernization across multiple teams.',
   },
   {
     icon: '⚡',
@@ -130,6 +130,7 @@ const skillGroups = [
     label: 'AI & Research',
     colorClass: 'bg-brand-600/10 text-brand-400 border-brand-600/30 hover:border-brand-500/60 dark:bg-brand-600/10 dark:text-brand-400 dark:border-brand-600/30',
     skills: ['Agentic AI', 'LLM Orchestration', 'Multi-Agent Systems', 'MLOps', 'AIOps', 'AI Compliance', 'Explainable AI'],
+    note: 'Currently leading enterprise-scale Agentic AI adoption and AI efficiency programs in FinTech — driving LLM integration into CI/CD pipelines and engineering workflows across distributed teams.',
   },
   {
     label: 'Engineering',
@@ -304,18 +305,25 @@ export default function Home() {
         <h2 className="section-heading text-gray-900 dark:text-content-primary">Skills & Stack</h2>
         <p className="section-subheading text-gray-500 dark:text-content-secondary">Technologies and domains I work in.</p>
         <div className="space-y-6">
-          {skillGroups.map(({ label, colorClass, skills }) => (
+          {skillGroups.map(({ label, colorClass, skills, note }) => (
             <div key={label} className="flex flex-col sm:flex-row sm:items-start gap-3">
               <span className="shrink-0 w-28 text-xs font-semibold uppercase tracking-widest
                 pt-1 text-gray-400 dark:text-content-tertiary font-mono">
                 {label}
               </span>
-              <div className="flex flex-wrap gap-2">
-                {skills.map(skill => (
-                  <span key={skill} className={`skill-tag border ${colorClass}`}>
-                    {skill}
-                  </span>
-                ))}
+              <div className="flex-1">
+                <div className="flex flex-wrap gap-2">
+                  {skills.map(skill => (
+                    <span key={skill} className={`skill-tag border ${colorClass}`}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+                {note && (
+                  <p className="mt-2.5 text-xs italic leading-relaxed text-slate-400 dark:text-slate-500">
+                    {note}
+                  </p>
+                )}
               </div>
             </div>
           ))}
