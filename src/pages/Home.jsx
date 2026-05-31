@@ -107,7 +107,7 @@ const credentials = [
     icon: '🧠',
     title: 'Researcher — Agentic AI & AIOps',
     org: 'Independent Research',
-    desc: 'Leading enterprise AI efficiency initiatives and Agentic AI adoption at Mastercard. Publishing and speaking on LLM-based autonomous agents, multi-agent orchestration, and AI-driven operations at scale.',
+    desc: 'Leading and Researching AI efficiency initiatives and Agentic AI adoption in FinTech world. Publishing and speaking on LLM-based autonomous agents, multi-agent orchestration, and AI-driven operations at scale.',
   },
   {
     icon: '🎓',
