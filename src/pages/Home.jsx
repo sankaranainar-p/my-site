@@ -129,7 +129,7 @@ const skillGroups = [
   {
     label: 'AI & Research',
     colorClass: 'bg-brand-600/10 text-brand-400 border-brand-600/30 hover:border-brand-500/60 dark:bg-brand-600/10 dark:text-brand-400 dark:border-brand-600/30',
-    skills: ['Agentic AI', 'LLM Orchestration', 'Multi-Agent Systems', 'MLOps', 'AIOps', 'AI Compliance', 'Explainable AI'],
+    skills: ['Agentic AI', 'AI Compliance', 'AIOps', 'AI efficiency', 'AI Solutions'],
     note: 'Currently leading enterprise-scale Agentic AI adoption and AI efficiency programs in FinTech — driving LLM integration into CI/CD pipelines and engineering workflows across distributed teams.',
   },
   {
@@ -140,14 +140,24 @@ const skillGroups = [
   {
     label: 'DevOps & CI/CD',
     colorClass: 'bg-emerald-600/10 text-emerald-400 border-emerald-600/30 hover:border-emerald-500/60',
-    skills: ['Jenkins', 'Kubernetes', 'Docker', 'Azure', 'Terraform', 'GitHub Actions'],
+    skills: ['Jenkins', 'Kubernetes', 'Docker', 'Azure', 'Terraform'],
   },
   {
     label: 'Observability',
     colorClass: 'bg-amber-600/10 text-amber-400 border-amber-600/30 hover:border-amber-500/60',
-    skills: ['Splunk', 'Dynatrace', 'SLO/SLI/SLA', 'Incident Response', 'Self-Healing Infrastructure'],
+    skills: ['Splunk', 'Dynatrace', 'SLO/SLI/SLA', 'Incident Response', 'RCA with Blameless Approach'],
   },
 ]
+
+// ── IEEE icon ──────────────────────────────────────────────────────────────
+
+function IEEEIcon() {
+  return (
+    <svg viewBox="0 0 44 18" className="h-4 w-auto shrink-0" fill="currentColor" aria-hidden="true">
+      <text x="0" y="15" fontSize="15" fontWeight="800" fontFamily="Arial, sans-serif" letterSpacing="0.5">IEEE</text>
+    </svg>
+  )
+}
 
 // ── ORCID icon ─────────────────────────────────────────────────────────────
 
@@ -215,9 +225,7 @@ export default function Home() {
                 </a>
                 <span className="credential-pill bg-blue-600/10 text-blue-700 border-blue-400/30
                   dark:bg-blue-600/10 dark:text-blue-300 dark:border-blue-500/30">
-                  <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
-                  </svg>
+                  <IEEEIcon />
                   IEEE Senior Member
                 </span>
               </div>
