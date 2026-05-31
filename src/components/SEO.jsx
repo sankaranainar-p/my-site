@@ -18,6 +18,7 @@ const PERSON_SCHEMA = {
     'https://orcid.org/0009-0006-1738-3863',
     'https://scholar.google.com/citations?user=IQQ1LrwAAAAJ&hl=en',
     'https://github.com/sankaranainar-p/ai-agentic-works',
+    'https://www.webofscience.com/wos/author/record/NWG-8160-2025',
   ],
   knowsAbout: ['Agentic AI', 'AIOps', 'Software Engineering', 'FinTech', 'Machine Learning'],
   description:
