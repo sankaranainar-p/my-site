@@ -106,7 +106,6 @@ const talks = [
     venue: 'IEEE SoutheastCon 2026 — IEEE Southeast Conference',
     year: '2026',
     type: 'Workshop Tutorial',
-    coPresenter: 'Dr. Ravi Gollapalli, University of North Alabama (UNA)',
     abstract: 'Presented a workshop on integrating self-learning test validation systems with MLOps pipelines for autonomous quality assurance in enterprise AI deployments.',
     featured: true,
   },
@@ -115,6 +114,7 @@ const talks = [
     event: 'Faculty Development Programme',
     venue: 'NCET',
     year: '2026',
+    abstract: 'Demoed the project "Agentic AI Dashboard for Personalized Mentorship" — a locally-running Agno agent that generates personalized remedial dashboards for at-risk students using Ollama and LanceDB RAG.',
   },
   {
     title: '6th International Conference on Global Financial and Business Environment (ICGFBE 2025)',
