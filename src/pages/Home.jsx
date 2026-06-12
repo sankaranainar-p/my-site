@@ -120,7 +120,7 @@ const credentials = [
 const highlights = [
   { label: 'Publications',        value: '5+'  },
   { label: 'Conference Talks',    value: '7+'  },
-  { label: 'Peer Reviews',        value: '40+' },
+  { label: 'Peer Reviews',        value: '51+' },
   { label: 'Years in Engineering',value: '15+' },
   { label: 'Research Domains',    value: '5'   },
 ]

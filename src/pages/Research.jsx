@@ -91,6 +91,10 @@ const reviews = [
   { venue: 'International Conference on Human-Computer Interaction (Human)', year: '2026', count: '1 paper' },
   { venue: 'International Conference on ICT for Global Innovations and Solutions', year: '2026', count: '1 paper' },
   { venue: 'International Conference on AI, Signal & Emerging Technologies (ICAISET)', year: '2026', count: '5 papers' },
+  { venue: 'IEEE Global Engineering Education Conference (EDUCON 2026), Cairo, Egypt', year: '2026', count: 'Reviewer' },
+  { venue: 'Emerging Technologies for Next-generation Connected Cities (ETNCC)', year: '2026', count: '3 papers' },
+  { venue: 'International Workshop on Intelligent Networks (IWIN)', year: '2026', count: '2 papers' },
+  { venue: 'IEEE International Conference on Control and Automation (ICCA)', year: '2026', count: '2 papers' },
 ]
 
 const statusBadge = {
@@ -338,7 +342,7 @@ export default function Research() {
         ))}
       </div>
       <p className="mt-6 text-sm text-center text-gray-400 dark:text-content-tertiary font-mono">
-        44 papers reviewed across 15 conferences
+        51+ papers reviewed across 19 conferences
       </p>
     </SectionWrapper>
   )
