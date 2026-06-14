@@ -117,6 +117,24 @@ const credentials = [
   },
 ]
 
+const mcRoles = [
+  {
+    title: 'Software Engineering Manager',
+    dates: 'Feb 2025 – Present',
+    desc: 'Leading B2B engineering teams building scalable web applications in Mastercard\'s Commercial domain — driving observability, compliance, and developer productivity at enterprise scale.',
+  },
+  {
+    title: 'Site Reliability Engineering Manager',
+    dates: 'Sep 2023 – Feb 2025',
+    desc: 'Led the UDAP NiFi team in Mastercard\'s Data Platforms, owning SLAs/SLOs/SLIs for mission-critical data pipelines and embedding reliability across the full SDLC.',
+  },
+  {
+    title: 'Lead Site Reliability Engineer',
+    dates: 'Jun 2022 – Oct 2023',
+    desc: 'Reduced manual deployment time by 40% through Jenkins/XLR automation and owned the NiFi deployment strategy for Mastercard\'s Unified Data Acquisition Platform in production.',
+  },
+]
+
 const highlights = [
   { label: 'Publications',        value: '5+'  },
   { label: 'Conference Talks',    value: '7+'  },
@@ -302,6 +320,66 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </SectionWrapper>
+
+      {/* ── Experience ── */}
+      <SectionWrapper className="pt-0">
+        <h2 className="section-heading text-gray-900 dark:text-content-primary">Experience</h2>
+        <p className="section-subheading text-gray-500 dark:text-content-secondary">Where I've built and led.</p>
+
+        <div className="card border-l-4 border-l-brand-600">
+          {/* Mastercard header */}
+          <div className="flex items-center justify-between mb-6 pb-5
+            border-b border-gray-100 dark:border-surface-600">
+            <div>
+              <p className="font-bold text-gray-900 dark:text-content-primary">Mastercard</p>
+              <p className="text-xs text-gray-400 dark:text-content-tertiary font-mono mt-0.5">
+                4 years · O'Fallon, MO
+              </p>
+            </div>
+            {/* Mastercard logo mark */}
+            <div className="flex shrink-0 items-center" aria-hidden="true">
+              <div className="w-7 h-7 rounded-full bg-red-600" />
+              <div className="w-7 h-7 rounded-full bg-orange-400 -ml-3 mix-blend-multiply dark:mix-blend-normal dark:opacity-90" />
+            </div>
+          </div>
+
+          {/* Vertical timeline */}
+          <div className="space-y-0">
+            {mcRoles.map((role, i) => (
+              <div key={role.title} className="relative pl-6 pb-6 last:pb-0">
+                {i < mcRoles.length - 1 && (
+                  <div className="absolute left-[6px] top-3.5 bottom-0 w-px
+                    bg-gray-200 dark:bg-surface-600" />
+                )}
+                <div className="absolute left-0 top-1.5 w-3 h-3 rounded-full
+                  border-2 border-brand-600 bg-white dark:bg-surface-800" />
+                <p className="font-semibold text-sm text-gray-900 dark:text-content-primary leading-snug">
+                  {role.title}
+                </p>
+                <p className="text-xs text-gray-400 dark:text-content-tertiary font-mono mt-0.5 mb-1.5">
+                  {role.dates}
+                </p>
+                <p className="text-sm text-gray-500 dark:text-content-secondary leading-relaxed">
+                  {role.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* LinkedIn link */}
+          <div className="mt-5 pt-4 border-t border-gray-100 dark:border-surface-600">
+            <a
+              href="https://www.linkedin.com/in/sankaranainar-paramasivan"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-medium text-brand-600 dark:text-brand-400
+                hover:text-brand-700 dark:hover:text-brand-300 transition-colors"
+            >
+              Full career history on LinkedIn →
+            </a>
+          </div>
         </div>
       </SectionWrapper>
 
