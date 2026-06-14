@@ -55,19 +55,36 @@ const INITIAL = { name: '', email: '', subject: '', message: '' }
 
 function ContactForm() {
   const [form, setForm] = useState(INITIAL)
-  const [sent, setSent] = useState(false)
+  const [status, setStatus] = useState('idle') // 'idle' | 'sending' | 'success' | 'error'
 
   const set = field => e => setForm(f => ({ ...f, [field]: e.target.value }))
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    const body = `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
-    window.location.href =
-      `mailto:p.sankarnainar@gmail.com` +
-      `?subject=${encodeURIComponent(form.subject || 'Contact from sankaranainar.vercel.app')}` +
-      `&body=${encodeURIComponent(body)}`
-    setSent(true)
-    setTimeout(() => setSent(false), 4000)
+    setStatus('sending')
+    try {
+      const response = await fetch('https://formspree.io/f/xaqzaqeg', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
+          message: form.message,
+        }),
+      })
+      if (response.ok) {
+        setStatus('success')
+        setForm(INITIAL)
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   const inputCls = `w-full px-4 py-2.5 rounded-lg text-sm transition-colors duration-150 outline-none
@@ -105,13 +122,29 @@ function ContactForm() {
           placeholder="Describe your inquiry — for speaking invitations please include event name, date, expected audience, and topic."
           className={`${inputCls} resize-none`} />
       </div>
-      <button type="submit" className="btn-primary w-full justify-center">
-        {sent ? (
+      <button
+        type="submit"
+        disabled={status === 'sending'}
+        className={`btn-primary w-full justify-center ${
+          status === 'success'
+            ? 'bg-emerald-600 hover:bg-emerald-700 border-emerald-600'
+            : ''
+        } disabled:opacity-60 disabled:cursor-not-allowed`}
+      >
+        {status === 'sending' ? (
+          <>
+            <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/>
+            </svg>
+            Sending…
+          </>
+        ) : status === 'success' ? (
           <>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-            Opening your email client…
+            Message Sent ✓
           </>
         ) : (
           <>
@@ -122,6 +155,23 @@ function ContactForm() {
           </>
         )}
       </button>
+
+      {status === 'success' && (
+        <p className="text-sm text-center font-medium text-emerald-600 dark:text-emerald-400">
+          Thanks! I'll respond within a few business days.
+        </p>
+      )}
+      {status === 'error' && (
+        <p className="text-sm text-center font-medium text-red-600 dark:text-red-400">
+          Something went wrong. Please email{' '}
+          <a href="mailto:p.sankarnainar@gmail.com"
+            className="font-mono underline hover:no-underline">
+            p.sankarnainar@gmail.com
+          </a>{' '}
+          directly.
+        </p>
+      )}
+
       <p className="text-xs text-center text-gray-400 dark:text-content-tertiary">
         Or write directly to{' '}
         <a href="mailto:p.sankarnainar@gmail.com"
