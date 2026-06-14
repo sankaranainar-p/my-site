@@ -74,6 +74,13 @@ const certifications = [
     category: 'Cloud & DevOps',
   },
   {
+    title: 'Reviewer Certificate — IEOM-VIT 2025',
+    issuer: 'Vellore Institute of Technology (VIT), India',
+    issued: '2025',
+    credentialId: null,
+    category: 'Peer Review',
+  },
+  {
     title: 'Reviewer Certificate — IEEE AI Symposium',
     issuer: 'University of South Dakota',
     issued: '2025',
@@ -132,6 +139,27 @@ const certifications = [
   {
     title: 'Reviewer Certificate — i5CPS-2026',
     issuer: 'NIT Karaikal',
+    issued: '2026',
+    credentialId: null,
+    category: 'Peer Review',
+  },
+  {
+    title: 'Reviewer Certificate — ICAISET-2026',
+    issuer: 'International Conference on AI, Signal & Emerging Technologies',
+    issued: '2026',
+    credentialId: null,
+    category: 'Peer Review',
+  },
+  {
+    title: 'Reviewer Certificate — HUMAN-2026',
+    issuer: 'Techno Bengal Institute of Technology, Kolkata (CSI Kolkata Chapter)',
+    issued: '2026',
+    credentialId: null,
+    category: 'Peer Review',
+  },
+  {
+    title: 'Reviewer Certificate — IEEE EDUCON 2026',
+    issuer: 'IEEE Education Society / British University in Egypt, Cairo',
     issued: '2026',
     credentialId: null,
     category: 'Peer Review',

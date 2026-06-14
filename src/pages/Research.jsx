@@ -73,6 +73,16 @@ const worksInProgress = [
     detail: 'Presented at ICGFBE 2025, manuscript targeting IEEE Big Data 2026.',
     status: 'Under Review',
   },
+  {
+    title: 'Explainable AI for Real-Time Financial Compliance and Risk Management',
+    detail: 'Explores explainability techniques applied to AI-driven compliance monitoring in financial systems. Under double-blind review.',
+    status: 'Under Review',
+  },
+  {
+    title: 'A Decentralized Agentic Architecture for Real-Time Compliance and Fraud Detection in Cross-Border Payment Systems',
+    detail: 'Proposes a decentralized multi-agent framework for real-time compliance enforcement and fraud detection across multi-jurisdiction payment rails. Under submission.',
+    status: 'Under Review',
+  },
 ]
 
 const reviews = [
@@ -90,7 +100,7 @@ const reviews = [
   { venue: 'World Conference on Computer Science and Technology (WcCST), Punjab', year: '2026', count: '2 papers' },
   { venue: 'International Conference on Human-Computer Interaction (Human)', year: '2026', count: '1 paper' },
   { venue: 'International Conference on ICT for Global Innovations and Solutions', year: '2026', count: '1 paper' },
-  { venue: 'International Conference on AI, Signal & Emerging Technologies (ICAISET)', year: '2026', count: '5 papers' },
+  { venue: 'International Conference on AI, Signal & Emerging Technologies (ICAISET)', year: '2026', count: '7 papers' },
   { venue: 'IEEE Global Engineering Education Conference (EDUCON 2026), Cairo, Egypt', year: '2026', count: 'Reviewer' },
   { venue: 'Emerging Technologies for Next-generation Connected Cities (ETNCC)', year: '2026', count: '3 papers' },
   { venue: 'International Workshop on Intelligent Networks (IWIN)', year: '2026', count: '2 papers' },
@@ -327,7 +337,7 @@ export default function Research() {
           Professional Peer Review &amp; Editorial Board Service
         </h2>
         <p className="mt-1 text-sm font-semibold text-brand-600 dark:text-brand-400">
-          40+ papers reviewed across IEEE, Springer, and Elsevier venues — spanning AI, distributed systems, FinTech, and cybersecurity.
+          54+ papers reviewed across IEEE, Springer, and Elsevier venues — spanning AI, distributed systems, FinTech, and cybersecurity.
         </p>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -342,7 +352,7 @@ export default function Research() {
         ))}
       </div>
       <p className="mt-6 text-sm text-center text-gray-400 dark:text-content-tertiary font-mono">
-        51+ papers reviewed across 19 conferences
+        54+ papers reviewed across 19 conferences
       </p>
     </SectionWrapper>
   )
