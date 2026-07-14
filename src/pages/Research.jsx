@@ -80,8 +80,8 @@ const worksInProgress = [
   },
   {
     title: 'A Decentralized Agentic Architecture for Real-Time Compliance and Fraud Detection in Cross-Border Payment Systems',
-    detail: 'Proposes a decentralized multi-agent framework for real-time compliance enforcement and fraud detection across multi-jurisdiction payment rails. Under submission.',
-    status: 'Under Review',
+    detail: 'Proposes a decentralized multi-agent framework for real-time compliance enforcement and fraud detection across multi-jurisdiction payment rails.',
+    status: 'In Preparation',
   },
 ]
 
@@ -111,6 +111,7 @@ const statusBadge = {
   'Published':      'bg-emerald-500/10 text-emerald-600 border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-400 dark:border-emerald-500/30',
   'In Press':       'bg-sky-500/10 text-sky-600 border-sky-500/30 dark:bg-sky-500/10 dark:text-sky-400 dark:border-sky-500/30',
   'Under Review':   'bg-amber-500/10 text-amber-600 border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-400 dark:border-amber-500/30',
+  'In Preparation': 'bg-slate-500/10 text-slate-600 border-slate-500/30 dark:bg-slate-500/10 dark:text-slate-400 dark:border-slate-500/30',
 }
 
 const talks = [

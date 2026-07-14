@@ -3,6 +3,14 @@ import SEO from '../components/SEO'
 
 const projects = [
   {
+    title: 'LexiQ — Research Intelligence Platform',
+    // TODO: confirm final description
+    desc: 'TODO: confirm final description',
+    // TODO: confirm final tags
+    tags: ['TODO'],
+    status: 'Beta',
+  },
+  {
     title: 'Autonomous Incident Resolution via AIOps',
     desc: 'An AIOps-powered autonomous incident resolution system that detects, classifies, and remediates infrastructure incidents without human intervention. Combines real-time telemetry ingestion, ML-based anomaly detection, and LLM-driven root cause analysis to generate and execute remediation playbooks automatically. Designed for enterprise-scale distributed systems with Splunk and Dynatrace as observability backends.',
     tags: ['Python', 'FastAPI', 'LangChain', 'Splunk API', 'Dynatrace API', 'Kafka', 'Redis', 'React', 'Agentic AI', 'AIOps', 'MLOps'],
