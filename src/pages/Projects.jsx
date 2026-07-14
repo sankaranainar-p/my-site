@@ -4,10 +4,8 @@ import SEO from '../components/SEO'
 const projects = [
   {
     title: 'LexiQ — Research Intelligence Platform',
-    // TODO: confirm final description
-    desc: 'TODO: confirm final description',
-    // TODO: confirm final tags
-    tags: ['TODO'],
+    desc: 'A research intelligence platform that grounds LLM-generated synthesis in verifiable evidence rather than raw generation. Combines retrieval-augmented generation with per-sentence source attribution, multi-document stance classification (supports/contradicts/qualifies), and a three-layer reference integrity check against CrossRef (existence, attribution, arithmetic). An append-only audit ledger logs every model call, prompt hash, and output hash for full reproducibility. All inference runs locally via Ollama; retrieval uses an in-process TF-IDF index, requiring no embedding model or network hop for search.',
+    tags: ['Python', 'Flask', 'Ollama', 'scikit-learn', 'TF-IDF', 'RAG', 'CrossRef API', 'pypdf', 'NumPy'],
     status: 'Beta',
   },
   {

@@ -19,8 +19,8 @@ const channels = [
       </svg>
     ),
     label: 'LinkedIn',
-    value: 'linkedin.com/in/sankaranainarparamasivan',
-    href: 'https://www.linkedin.com/in/sankaranainarparamasivan/',
+    value: 'linkedin.com/in/sankaranainar-paramasivan',
+    href: 'https://www.linkedin.com/in/sankaranainar-paramasivan/',
     desc: 'Professional updates and connections',
   },
   {

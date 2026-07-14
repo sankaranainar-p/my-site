@@ -14,7 +14,7 @@ const PERSON_SCHEMA = {
   alumniOf: { '@type': 'Organization', name: 'University of Illinois Urbana-Champaign' },
   memberOf: { '@type': 'Organization', name: 'Institute of Electrical and Electronics Engineers' },
   sameAs: [
-    'https://linkedin.com/in/sankaramainarparmasivan',
+    'https://linkedin.com/in/sankaranainar-paramasivan',
     'https://orcid.org/0009-0006-1738-3863',
     'https://scholar.google.com/citations?user=IQQ1LrwAAAAJ&hl=en',
     'https://github.com/sankaranainar-p/ai-agentic-works',
