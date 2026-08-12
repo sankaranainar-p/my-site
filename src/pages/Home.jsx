@@ -116,7 +116,7 @@ export default function Home() {
         <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 px-6 lg:px-8 border-b border-gray-200 dark:border-surface-900 overflow-hidden">
           <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center z-10">
             {/* Left side info */}
-            <div className="lg:col-span-7 flex flex-col justify-center space-y-6 text-left">
+            <div className="order-2 lg:order-1 lg:col-span-7 flex flex-col justify-center space-y-6 text-left">
               <div className="flex flex-wrap gap-2 items-center">
                 <span className="credential-pill bg-blue-600/10 text-blue-700 border-blue-400/30
                   dark:bg-blue-600/10 dark:text-blue-300 dark:border-blue-500/30">
@@ -188,7 +188,7 @@ export default function Home() {
             </div>
 
             {/* Right side professional photo */}
-            <div className="lg:col-span-5 flex justify-center">
+            <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center">
               <div className="shrink-0 relative">
                 {/* Glow ring */}
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-40 dark:opacity-60
@@ -199,6 +199,9 @@ export default function Home() {
                     src="/new-profile-pic.jpg"
                     alt="Sankaranainar Parmasivan"
                     className="w-full h-full object-cover object-top"
+                    width="640"
+                    height="648"
+                    fetchpriority="high"
                     onError={(e) => {
                       e.target.src = "/profile.jpeg";
                     }}
