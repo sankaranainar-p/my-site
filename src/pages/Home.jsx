@@ -226,7 +226,7 @@ export default function Home() {
                 <div className="text-[10px] text-gray-400 dark:text-content-tertiary mt-0.5 font-mono">3 IEEE · 2 Springer</div>
               </div>
               <div className="text-center p-4 md:border-r border-gray-200 dark:border-surface-900 last:border-0">
-                <div className="text-3xl sm:text-4xl font-extrabold text-brand-600 dark:text-brand-400 font-mono">54+</div>
+                <div className="text-3xl sm:text-4xl font-extrabold text-brand-600 dark:text-brand-400 font-mono">66+</div>
                 <div className="text-xs uppercase tracking-widest text-gray-500 dark:text-content-secondary mt-1 font-mono">Peer Reviews</div>
               </div>
               <div className="text-center p-4 md:border-r border-gray-200 dark:border-surface-900 last:border-0">

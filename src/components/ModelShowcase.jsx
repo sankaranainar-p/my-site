@@ -23,8 +23,8 @@ export default function ModelShowcase() {
     ],
     metrics: [
       { label: 'Active Projects Synced', value: '7 Projects' },
-      { label: 'Peer Reviews Done', value: '54+ Papers' },
-      { label: 'Verified Venues', value: '19 IEEE/Springer' }
+      { label: 'Peer Reviews Done', value: '66+ Papers' },
+      { label: 'Verified Venues', value: '22 IEEE/Springer' }
     ]
   }
 

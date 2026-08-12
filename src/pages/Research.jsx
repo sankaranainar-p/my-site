@@ -105,7 +105,7 @@ const reviews = [
   { venue: '5th International Conference on Artificial Intelligence and Knowledge Processing (AIKP)', year: '2025', count: '2 papers', publisher: 'IEEE/Springer' },
   { venue: 'International Conference on Computational Approaches (iconCEPT), NIT Puducherry', year: '2025', count: '3 papers', publisher: 'NIT Puducherry' },
   { venue: 'International Conference on Smart Technologies and Innovation for Computing (INCSTIC)', year: '2025', count: '1 paper', publisher: 'IEEE' },
-  { venue: 'IEEE Conference on AI in Education (PUNECON track)', year: '2025', count: '6 papers', publisher: 'IEEE' },
+  { venue: 'IEEE Conference on AI in Education (PUNECON track)', year: '2025', count: '5 papers', publisher: 'IEEE' },
   { venue: 'International Conference on Industrial Engineering and Operations Management (IEOM-VIT)', year: '2025', count: '4 papers', publisher: 'IEOM' },
   { venue: 'International Conference on Recent Trends in Advanced Computing (ICRTAC), Malaysia — VIT', year: '2025', count: '4 papers', publisher: 'VIT' },
   { venue: '2nd International Conference on Business Intelligence, Computational Mathematics & Data Analytics (IBCD), Dr. D.Y. Patil Institute, Pune', year: '2025', count: '7 papers', publisher: 'Springer' },
@@ -120,7 +120,10 @@ const reviews = [
   { venue: 'IEEE Global Engineering Education Conference (EDUCON 2026), Cairo, Egypt', year: '2026', count: 'Reviewer', publisher: 'IEEE' },
   { venue: 'Emerging Technologies for Next-generation Connected Cities (ETNCC)', year: '2026', count: '3 papers', publisher: 'IEEE' },
   { venue: 'International Workshop on Intelligent Networks (IWIN)', year: '2026', count: '2 papers', publisher: 'IEEE' },
-  { venue: 'IEEE International Conference on Control and Automation (ICCA)', year: '2026', count: '2 papers', publisher: 'IEEE' },
+  { venue: 'IEEE International Conference on Control and Automation (ICCA)', year: '2026', count: '8 papers', publisher: 'IEEE' },
+  { venue: 'TEMSMET 2026', year: '2026', count: '3 papers', publisher: 'IEEE' },
+  { venue: 'Metasphere 2026', year: '2026', count: '3 papers', publisher: 'IEEE' },
+  { venue: 'IEEE-ETECOM 2026', year: '2026', count: '1 paper', publisher: 'IEEE' },
 ]
 
 const statusBadge = {
@@ -299,7 +302,7 @@ export default function Research() {
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">Peer Review &amp; Editorial Service</h2>
             </div>
             <p className="text-xs text-gray-500 dark:text-zinc-400 mt-1 font-mono">
-              54+ papers reviewed across 19 IEEE, Springer, and Elsevier conference venues.
+              66+ papers reviewed across 22 IEEE, Springer, and Elsevier conference venues.
             </p>
           </div>
 
