@@ -114,7 +114,7 @@ export default function Home() {
 
         {/* ── 1. Hero Section ── */}
         <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 px-6 lg:px-8 border-b border-gray-200 dark:border-surface-900 overflow-hidden">
-          <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center z-10">
+          <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center z-10">
             {/* Left side info */}
             <div className="lg:col-span-7 flex flex-col justify-center space-y-6 text-left">
               <div className="flex flex-wrap gap-2 items-center">
@@ -188,7 +188,7 @@ export default function Home() {
             </div>
 
             {/* Right side professional photo */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="lg:col-span-5 flex justify-center">
               <div className="shrink-0 relative">
                 {/* Glow ring */}
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-40 dark:opacity-60
