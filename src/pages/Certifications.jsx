@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import SectionWrapper from '../components/SectionWrapper'
 import SEO from '../components/SEO'
+import { Award, Filter, ExternalLink, GraduationCap } from 'lucide-react'
 
 const certifications = [
   {
@@ -169,17 +170,10 @@ const certifications = [
 const categories = ['All', 'AI & Prompt Engineering', 'Leadership & Management', 'Cloud & DevOps', 'Peer Review']
 
 const categoryColor = {
-  'AI & Prompt Engineering': 'bg-navy-50 text-navy-700 border-navy-200 dark:bg-brand-600/10 dark:text-brand-400 dark:border-brand-600/30',
-  'Leadership & Management': 'bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-600/10 dark:text-purple-400 dark:border-purple-600/30',
-  'Cloud & DevOps':          'bg-sky-50 text-sky-700 border-sky-200 dark:bg-sky-600/10 dark:text-sky-400 dark:border-sky-600/30',
-  'Peer Review':             'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-600/10 dark:text-emerald-400 dark:border-emerald-600/30',
-}
-
-const categoryAccent = {
-  'AI & Prompt Engineering': 'border-l-brand-600',
-  'Leadership & Management': 'border-l-purple-500',
-  'Cloud & DevOps':          'border-l-sky-500',
-  'Peer Review':             'border-l-emerald-500',
+  'AI & Prompt Engineering': 'bg-brand-50 text-brand-700 border-brand-200 dark:bg-brand-500/10 dark:text-brand-400 dark:border-brand-500/30',
+  'Leadership & Management': 'bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-500/10 dark:text-purple-400 dark:border-purple-500/30',
+  'Cloud & DevOps':          'bg-sky-50 text-sky-700 border-sky-200 dark:bg-sky-500/10 dark:text-sky-400 dark:border-sky-500/30',
+  'Peer Review':             'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-400 dark:border-emerald-500/30',
 }
 
 export default function Certifications() {
@@ -194,21 +188,32 @@ export default function Certifications() {
         canonical="https://sankaranainar.dev/certifications"
         ogType="website"
       />
-      <h1 className="section-heading text-gray-900 dark:text-content-primary">Certifications</h1>
-      <p className="section-subheading text-gray-500 dark:text-content-secondary">
-        Continuous learning across AI, engineering leadership, and cloud operations.
-      </p>
+
+      {/* Header */}
+      <div className="mb-10">
+        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-brand-50 text-brand-700 border border-brand-200 dark:bg-brand-500/10 dark:text-brand-400 dark:border-brand-500/20 mb-3">
+          <GraduationCap className="w-3.5 h-3.5" />
+          <span>Continuous Learning</span>
+        </span>
+        <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          Certifications
+        </h1>
+        <p className="text-gray-500 dark:text-zinc-400 text-sm mt-2 max-w-2xl leading-relaxed">
+          Continuous learning across AI, engineering leadership, and cloud operations.
+        </p>
+      </div>
 
       {/* Filter tabs */}
-      <div className="flex flex-wrap gap-2 mb-8">
+      <div className="flex items-center gap-2 flex-wrap mb-8 bg-gray-100 dark:bg-zinc-900 p-1.5 rounded-xl border border-gray-200 dark:border-zinc-800 w-fit">
+        <Filter className="w-3.5 h-3.5 text-gray-400 dark:text-zinc-500 ml-1.5" />
         {categories.map(cat => (
           <button
             key={cat}
             onClick={() => setActive(cat)}
-            className={`px-4 py-1.5 rounded-full text-sm font-medium border transition-colors ${
+            className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all ${
               active === cat
-                ? 'bg-brand-600 border-brand-600 text-white'
-                : 'border-gray-300 dark:border-surface-500 text-gray-500 dark:text-content-secondary hover:border-brand-600 hover:text-brand-600 dark:hover:border-brand-500 dark:hover:text-brand-400'
+                ? 'bg-brand-600 text-white font-bold'
+                : 'text-gray-500 dark:text-zinc-400 hover:text-gray-900 dark:hover:text-white'
             }`}
           >
             {cat}
@@ -217,38 +222,47 @@ export default function Certifications() {
       </div>
 
       {/* Cert cards */}
-      <div className="space-y-4">
+      <div className="grid sm:grid-cols-2 gap-4">
         {filtered.map(({ title, issuer, issued, credentialId, category }) => (
-          <div key={title} className={`card border-l-4 ${categoryAccent[category]} flex flex-wrap items-start justify-between gap-4`}>
-            <div className="flex-1 min-w-0">
-              <h3 className="font-semibold mb-1 text-gray-900 dark:text-content-primary">{title}</h3>
-              <p className="text-sm text-gray-500 dark:text-content-secondary">{issuer}</p>
-              <div className="flex flex-wrap items-center gap-3 mt-2">
-                <span className="text-xs text-gray-400 dark:text-content-tertiary font-mono">Issued {issued}</span>
+          <div
+            key={title}
+            className="p-5 rounded-2xl border border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-950/80 hover:border-brand-300 dark:hover:border-brand-500/40 transition-all flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-start justify-between gap-3 mb-2">
+                <h3 className="font-bold text-sm text-gray-900 dark:text-white leading-snug">{title}</h3>
+                <Award className="w-4 h-4 text-brand-500/70 shrink-0 mt-0.5" />
+              </div>
+              <p className="text-xs text-gray-500 dark:text-zinc-400">{issuer}</p>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-between gap-3 mt-4 pt-3 border-t border-gray-200 dark:border-zinc-800/80">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="text-[11px] font-mono text-gray-400 dark:text-zinc-500">Issued {issued}</span>
                 {credentialId && (
-                  <span className="text-xs text-gray-400 dark:text-content-tertiary font-mono">ID: {credentialId}</span>
+                  <span className="text-[11px] font-mono text-gray-400 dark:text-zinc-500">ID: {credentialId}</span>
                 )}
               </div>
-              {credentialId && (
-                <a
-                  href={`https://coursera.org/verify/${credentialId}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 mt-1.5 text-xs font-medium
-                    text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300 transition-colors"
-                >
-                  Verify Credential ↗
-                </a>
-              )}
+              <span className={`px-2.5 py-1 rounded-full text-[11px] font-mono border font-medium ${categoryColor[category]}`}>
+                {category}
+              </span>
             </div>
-            <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border shrink-0 ${categoryColor[category]}`}>
-              {category}
-            </span>
+
+            {credentialId && (
+              <a
+                href={`https://coursera.org/verify/${credentialId}`}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 mt-3 text-xs font-mono text-brand-600 dark:text-brand-400 hover:underline"
+              >
+                Verify Credential <ExternalLink className="w-3 h-3" />
+              </a>
+            )}
           </div>
         ))}
       </div>
 
-      <p className="mt-8 text-sm text-center text-gray-400 dark:text-content-tertiary font-mono">
+      <p className="mt-8 text-xs text-center text-gray-400 dark:text-zinc-500 font-mono">
         {certifications.length} certifications total
       </p>
     </SectionWrapper>
