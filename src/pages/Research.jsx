@@ -72,7 +72,6 @@ const publications = [
     type: 'Springer LNNS Book Chapter',
     status: 'Published',
     doi: 'https://doi.org/10.1007/978-3-032-32476-4_45',
-    coAuthors: 'Kathiresan Jayabalan, Sethuraman Radhakrishnan',
     abstract: 'Explores the application of AI-augmented monitoring and automated compliance validation in SRE workflows for financial systems. Proposes a self-healing infrastructure model that reduces mean-time-to-resolution while maintaining regulatory compliance in high-availability FinTech environments.',
   },
   {
@@ -83,7 +82,6 @@ const publications = [
     type: 'Springer LNNS Book Chapter',
     status: 'Published',
     doi: 'https://doi.org/10.1007/978-3-032-32476-4_46',
-    coAuthors: 'Kathiresan Jayabalan, Sethuraman Radhakrishnan',
     abstract: 'Presents a microservices orchestration framework that applies adaptive AI models for real-time fraud detection across multi-jurisdiction financial platforms. Demonstrates measurable improvement in detection accuracy while maintaining compliance with GDPR, PCI DSS, and MICA regulatory frameworks.',
   },
 ]
@@ -221,7 +219,7 @@ export default function Research() {
       </h2>
 
       <div className="space-y-4 mb-14">
-        {publications.map(({ id, title, venue, year, type, status, doi, coAuthors, abstract, repoUrl, featured }) => (
+        {publications.map(({ id, title, venue, year, type, status, doi, abstract, repoUrl, featured }) => (
           <div
             key={id}
             className={`p-6 rounded-2xl border bg-white dark:bg-zinc-950/80 transition-all ${
@@ -239,7 +237,6 @@ export default function Research() {
                 )}
                 <h3 className="font-bold text-base text-gray-900 dark:text-white leading-snug">{title}</h3>
                 <p className="text-xs text-gray-500 dark:text-zinc-400 font-mono mt-1">{venue} · {year}</p>
-                {coAuthors && <p className="text-xs text-gray-400 dark:text-zinc-500 mt-1">Co-authors: {coAuthors}</p>}
               </div>
 
               <div className="flex items-center gap-2 shrink-0 flex-wrap">
